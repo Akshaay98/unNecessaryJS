@@ -1,0 +1,27 @@
+const secondLarge = (nums) => {
+  let test = nums;
+  
+  let max = -Infinity;
+  for (i = 0; i < test.length; i++) {
+    if (nums[i] > max) {
+      max = nums[i];
+    }
+  }
+  test.splice(test.indexOf(max), 1);
+  max = -Infinity;
+  for (i = 0; i < test.length; i++) {
+    if (nums[i] > max) {
+      max = nums[i];
+    }
+  }
+  test.splice(test.indexOf(max), 1);
+  max = -Infinity;
+  for (i = 0; i < test.length; i++) {
+    if (nums[i] > max) {
+      max = nums[i];
+    }
+  }
+return max
+  
+};
+console.log(secondLarge([1, 2, 3, 4, 5]));
