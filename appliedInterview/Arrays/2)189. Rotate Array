@@ -1,0 +1,11 @@
+var rotate = function(nums, k) {
+  let last = (nums.length - 1)
+  
+  for (var i = 1; i <= k; i++) {
+      nums.unshift(nums[last])
+      nums.pop()
+      
+  }
+return nums
+};
+console.log(rotate([-1, -100, 3, 99], 2));
