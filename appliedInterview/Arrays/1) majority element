@@ -1,0 +1,23 @@
+var majorityElement = function(nums) {
+  let result = {}
+  let map = new Map()
+  let max = -Infinity
+  let output
+  for (num of nums)
+  {
+    result[num] = result[num] ? result[num] + 1 : 1
+  }
+  for (let [key, value] of Object.entries(result))
+  {
+   
+    if (value > max)
+    {
+      max = value
+
+      output = key
+     
+       }
+  }
+ return  Number.parseInt(output)
+ 
+};
