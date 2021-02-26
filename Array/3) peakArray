@@ -1,0 +1,44 @@
+/**
+ * @param {number[]} arr
+ * @return {boolean}
+ */
+var validMountainArray = function(arr) {
+  let peak
+  if(arr.length<3) return false
+  let i = 0
+  let leftIDX 
+  let rightIDX
+  while (i < arr.length)
+  {
+    peak = (arr[i] > arr[i - 1] && arr[i] > arr[i+1])
+    if (!peak) {
+      i++
+      continue
+    }
+ 
+    else 
+  
+       leftIDX = i - 2
+      for (k = 0; k < leftIDX; k++)
+      {
+        if (arr[k] > arr[k + 1])
+        {
+          return false
+          }
+    }
+    rightIDX=i+2
+      for (l = rightIDX; l < arr.length; l++)
+      {
+        if (arr[l] > arr[l + 1])
+        {
+          return false
+          }
+    }
+    return true
+   
+  }
+  return false
+
+   
+};
+console.log(validMountainArray([0,1,2,1,2]));
