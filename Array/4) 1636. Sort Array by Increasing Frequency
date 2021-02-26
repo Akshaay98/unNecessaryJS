@@ -1,0 +1,19 @@
+/**
+ * @param {number[]} nums
+ * @return {number[]}
+ */
+var frequencySort = function(nums) {
+  let finalResult = []
+  let map = {}
+  let max = -Infinity
+  for (num of nums)
+  {
+    map[num]= map[num]? map[num]+1:1
+    }
+ 
+   
+  
+ return   nums.sort((a, b) => map[a] === map[b] ? (b - a) : (map[a] - map[b]));
+
+};
+console.log(frequencySort([1,1,2,2,2,3]));
